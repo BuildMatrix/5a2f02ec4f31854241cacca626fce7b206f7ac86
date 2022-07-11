@@ -1,0 +1,3 @@
+[submodule "yrdy"]
+	path = yrdy
+	url = https://github.com/BuildMatrix/yrdy
