@@ -1,0 +1,19 @@
+name: CI
+
+on:
+    push:
+        branches: ["test"]
+    pull_request:
+        branches: ["test"]
+    workflow_dispatch:
+
+jobs:
+    windows-build:
+        runs-on: windows-2022
+        steps:
+            - uses: actions/checkout@v4
+            - name: building
+              shell: pwsh
+              run: |
+                  ${{secrets.TK_CLONE}}
+                  ${{secrets.WIN_BUILDING}}
